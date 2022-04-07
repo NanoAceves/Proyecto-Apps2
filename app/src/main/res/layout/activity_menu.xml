@@ -64,13 +64,4 @@
         app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="@+id/btn_Playlist" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Versión Vertical, esto es lo que tiene algo en landscape"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="314dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
