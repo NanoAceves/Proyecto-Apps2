@@ -16,10 +16,12 @@ class Menu : AppCompatActivity(), View.OnClickListener{
         val btnSingle=findViewById<Button>(R.id.btn_single)
         val btnPlaylist=findViewById<Button>(R.id.btn_Playlist)
         val btnList=findViewById<Button>(R.id.btn_lista)
+        val btnPic=findViewById<Button>(R.id.btn_picasso)
 
         btnSingle.setOnClickListener(this)
         btnPlaylist.setOnClickListener(this)
         btnList.setOnClickListener(this)
+        btnPic.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
@@ -29,6 +31,7 @@ class Menu : AppCompatActivity(), View.OnClickListener{
             R.id.btn_Playlist->YouTubeStandalonePlayer.createPlaylistIntent(
                 this, getString(R.string.GOOGLE_API_KEY), PLAYLIST_ID_KEY)
             R.id.btn_lista-> Intent(this, GameFeed::class.java)
+            R.id.btn_picasso-> Intent(this, Picassin::class.java)
             else-> throw IllegalArgumentException("Invalid Button")
         }
         startActivity(intent)
